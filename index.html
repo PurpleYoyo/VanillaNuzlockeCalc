@@ -104,7 +104,7 @@
                 <label class="btn btn-small btn-mid" for="gen8">S/S</label>
                 <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" />
                 <label class="btn btn-small btn-mid" for="gen9">S/V</label>
-                <input class="gen visually-hidden" type="radio" name="gen" value="0" id="0" />
+                <input class="gen visually-hidden" type="radio" name="gen" value="0" id="gen0" />
                 <label class="btn btn-small btn-right" for="0">LGPE</label>
             </div>
             <!-- <div class="notationSelection" aria-labelledby="selectNotationInstruction" role="radiogroup"
@@ -267,7 +267,7 @@
                             </div>
 
                             <div class="info-group info-selectors">
-                                <div class="gen-specific g3 g4 g5 g6 g7 g8 g9">
+                                <div class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0">
                                     <label for="natureL1">Nature</label>
                                     <select class="nature calc-trigger" id="natureL1">
                                         <option value="Adamant">Adamant (+Atk, -SpA)</option>
@@ -355,6 +355,7 @@
                                     <th class="gen-specific g3 g4 g5 g6 g7 g8 g9" scope="col">IVs</th>
                                     <th class="gen-specific g3 g4 g5 g6 g7 g8 g9" scope="col">EVs</th>
                                     <th class="gen-specific g1 g2 hide" scope="col">DVs</th>
+                                    <th class="gen-specific g0 hide" scope="col">AVs</th>
                                     <th></th>
                                     <th></th>
                                 </tr>
@@ -367,7 +368,7 @@
                                     <td>
                                         <input class="base calc-trigger" value="100" />
                                     </td>
-                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
+                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0">
                                         <input class="ivs calc-trigger" value="31" />
                                     </td>
                                     <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
@@ -376,6 +377,9 @@
                                     </td>
                                     <td class="gen-specific g1 g2 hide">
                                         <input class="dvs calc-trigger" value="15" disabled="disabled" />
+                                    </td>
+                                    <td class="gen-specific g0 hide">
+                                        <input class="dvs calc-trigger" type="number" min="0" max="100" disabled="disabled" />
                                     </td>
 
                                     <td><span class="total">341</span>
@@ -389,7 +393,7 @@
                                     <td>
                                         <input class="base calc-trigger" value="100" />
                                     </td>
-                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
+                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0">
                                         <input class="ivs calc-trigger" value="31" />
                                     </td>
                                     <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
@@ -398,6 +402,9 @@
                                     </td>
                                     <td class="gen-specific g1 g2 hide">
                                         <input class="dvs calc-trigger" value="15" />
+                                    </td>
+                                    <td class="gen-specific g0 hide">
+                                        <input class="dvs calc-trigger" type="number" min="0" max="100" disabled="disabled" />
                                     </td>
 
                                     <td><span class="total">236</span>
@@ -427,7 +434,7 @@
                                     <td>
                                         <input class="base calc-trigger" value="100" />
                                     </td>
-                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
+                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0">
                                         <input class="ivs calc-trigger" value="31" />
                                     </td>
                                     <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
@@ -436,6 +443,9 @@
                                     </td>
                                     <td class="gen-specific g1 g2 hide">
                                         <input class="dvs calc-trigger" value="15" />
+                                    </td>
+                                    <td class="gen-specific g0 hide">
+                                        <input class="dvs calc-trigger" type="number" min="0" max="100" disabled="disabled" />
                                     </td>
 
                                     <td><span class="total">236</span>
@@ -458,14 +468,14 @@
                                         </select>
                                     </td>
                                 </tr>
-                                <tr class="sa gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
+                                <tr class="sa gen-specific g2 g3 g4 g5 g6 g7 g8 g9 g0">
                                     <th scope="row">
                                         <label>Sp. Atk</label>
                                     </th>
                                     <td>
                                         <input class="base calc-trigger" value="100" />
                                     </td>
-                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
+                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0">
                                         <input class="ivs calc-trigger" value="31" />
                                     </td>
                                     <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
@@ -474,6 +484,9 @@
                                     </td>
                                     <td class="gen-specific g1 g2 hide">
                                         <input class="dvs calc-trigger" value="15" />
+                                    </td>
+                                    <td class="gen-specific g0 hide">
+                                        <input class="dvs calc-trigger" type="number" min="0" max="100" disabled="disabled" />
                                     </td>
 
                                     <td><span class="total">236</span>
@@ -496,14 +509,14 @@
                                         </select>
                                     </td>
                                 </tr>
-                                <tr class="sd gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
+                                <tr class="sd gen-specific g2 g3 g4 g5 g6 g7 g8 g9 g0">
                                     <th scope="row">
                                         <label>Sp. Def</label>
                                     </th>
                                     <td>
                                         <input class="base calc-trigger" value="100" />
                                     </td>
-                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
+                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0">
                                         <input class="ivs calc-trigger" value="31" />
                                     </td>
                                     <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
@@ -512,6 +525,9 @@
                                     </td>
                                     <td class="gen-specific g1 g2 hide">
                                         <input class="dvs calc-trigger" value="15" disabled="disabled" />
+                                    </td>
+                                    <td class="gen-specific g0 hide">
+                                        <input class="dvs calc-trigger" type="number" min="0" max="100" disabled="disabled" />
                                     </td>
 
                                     <td><span class="total">236</span>
@@ -572,7 +588,7 @@
                                     <td>
                                         <input class="base calc-trigger" value="100" />
                                     </td>
-                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
+                                    <td class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0">
                                         <input class="ivs calc-trigger" value="31" />
                                     </td>
                                     <td class="gen-specific g3 g4 g5 g6 g7 g8 g9">
@@ -581,6 +597,9 @@
                                     </td>
                                     <td class="gen-specific g1 g2 hide">
                                         <input class="dvs calc-trigger" value="15" />
+                                    </td>
+                                    <td class="gen-specific g0 hide">
+                                        <input class="dvs calc-trigger" type="number" min="0" max="100" disabled="disabled" />
                                     </td>
 
                                     <td><span class="total">236</span>
@@ -616,7 +635,7 @@
                             <select class="move-selector calc-trigger small-select"></select>
                             <input class="move-bp calc-trigger" value="50" />
                             <select class="move-type calc-trigger"></select>
-                            <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9">
+                            <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9 g0">
                                 <option value="Physical">Physical</option>
                                 <option value="Special">Special</option>
                             </select>
@@ -656,7 +675,7 @@
                             <select class="move-selector calc-trigger small-select"></select>
                             <input class="move-bp calc-trigger" value="0" />
                             <select class="move-type calc-trigger"></select>
-                            <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9">
+                            <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9 g0">
                                 <option value="Physical">Physical</option>
                                 <option value="Special">Special</option>
                             </select>
@@ -696,7 +715,7 @@
                             <select class="move-selector calc-trigger small-select"></select>
                             <input class="move-bp calc-trigger" value="0" />
                             <select class="move-type calc-trigger"></select>
-                            <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9">
+                            <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9 g0">
                                 <option value="Physical">Physical</option>
                                 <option value="Special">Special</option>
                             </select>
@@ -736,7 +755,7 @@
                             <select class="move-selector calc-trigger small-select"></select>
                             <input class="move-bp calc-trigger" value="0" />
                             <select class="move-type calc-trigger"></select>
-                            <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9">
+                            <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7 g8 g9 g0">
                                 <option value="Physical">Physical</option>
                                 <option value="Special">Special</option>
                             </select>
@@ -785,7 +804,7 @@
                 <div class="field-info" aria-label="Field information" role="region">
                     <fieldset class="field-info">
                         <legend align="center">Field</legend>
-                        <div aria-labelledby="selectBattleFormatInstruction" class="gen-specific g3 g4 g5 g6 g7 g8 g9"
+                        <div aria-labelledby="selectBattleFormatInstruction" class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0"
                             role="radiogroup" title="Select the battle format.">
                             <span class="visually-hidden" id="selectBattleFormatInstruction">Select the battle
                                 format.</span>
@@ -835,7 +854,7 @@
                         <div aria-labelledby="selectWeatherInstruction" role="radiogroup">
                             <span class="visually-hidden" id="selectWeatherInstruction">Select the current weather
                                 condition.</span>
-                            <div class="gen-specific g3 g4 g5 g6 g7 g8 g9" style="width: 22.2em; margin: 5px auto;"
+                            <div class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0" style="width: 22.2em; margin: 5px auto;"
                                 title="Select the current weather condition.">
                                 <input class="visually-hidden calc-trigger" type="radio" name="weather" value=""
                                     id="clear" checked="checked" />
@@ -849,7 +868,7 @@
                                 <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Sand"
                                     id="sand" />
                                 <label class="btn btn-small btn-mid" for="sand">Sand</label>
-                                <span class="gen-specific g3 g4 g5 g6 g7 g8">
+                                <span class="gen-specific g3 g4 g5 g6 g7 g8 g0">
                                     <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Hail"
                                         id="hail" />
                                     <label class="btn btn-small btn-right" for="hail">Hail</label>
@@ -921,7 +940,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="gen-specific g4 g5 g6 g7 g8 g9">
+                                <tr class="gen-specific g4 g5 g6 g7 g8 g9 g0">
                                     <div hidden id="selectStealthRockInstruction">Is Stealth Rock affecting this side of
                                         the field?</div>
                                     <td>
@@ -1009,7 +1028,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="gen-specific g3 g4 g5 g6 g7 g8 g9">
+                                <tr class="gen-specific g3 g4 g5 g6 g7 g8 g9 g0">
                                     <div hidden id="selectSpikeInstruction">Are there Spikes on this side of the field?
                                     </div>
                                     <td>
@@ -1093,7 +1112,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
+                                <tr class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9 g0">
                                     <td>
                                         <div class="left" title="Is this Pok&eacute;mon protected?">
                                             <div hidden id="selectProtectInstruction">Is this Pok&eacute;mon protected?
