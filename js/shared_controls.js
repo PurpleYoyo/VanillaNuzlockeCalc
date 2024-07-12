@@ -1290,7 +1290,7 @@ $(".gen").change(function () {
 	gen = ~~$(this).val() || 9;
 	GENERATION = calc.Generations.get(gen);
 	var params = new URLSearchParams(window.location.search);
-	if (gen === 9) {
+	if (gen === 0) {
 		params.delete('gen');
 		params = '' + params;
 		if (window.history && window.history.replaceState) {
