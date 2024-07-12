@@ -469,7 +469,7 @@ var SV = (0, util_1.extend)(true, {}, SS, {
         '???': 1
     }
 });
-exports.TYPE_CHART = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+exports.TYPE_CHART = [SM, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Types = (function () {
     function Types(gen) {
         this.gen = gen;
