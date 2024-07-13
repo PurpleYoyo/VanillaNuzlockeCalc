@@ -6250,8 +6250,7 @@ var SM_PATCH = {
             'Pikachu-Alola',
             'Pikachu-Hoenn',
             'Pikachu-Kalos',
-            'Pikachu-Original',
-            'Pikachu-Partner',
+            'Pikachu-Original',            'Pikachu-Partner',
             'Pikachu-Sinnoh',
             'Pikachu-Starter',
             'Pikachu-Unova',
@@ -10027,8 +10026,185 @@ var SV_PATCH = {
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH, PLA_PATCH);
-//var LGPE = (0, util_1.extend)(true, {}, RBY, LGPE_PATCH);
-exports.SPECIES = [SM, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+LGPE_PATCH = {
+    Diglett: { otherFormes: ['Diglett-Alola'] },
+    Dugtrio: { bs: { at: 100 }, otherFormes: ['Dugtrio-Alola'] },
+    Eevee: { otherFormes: ['Eevee-Starter'] },
+    Exeggutor: { bs: { sd: 75 }, otherFormes: ['Exeggutor-Alola'] },
+    Geodude: { otherFormes: ['Geodude-Alola'] },
+    Golem: { otherFormes: ['Golem-Alola'] },
+    Graveler: { otherFormes: ['Graveler-Alola'] },
+    Grimer: { otherFormes: ['Grimer-Alola'] },
+    Marowak: { otherFormes: ['Marowak-Alola'] },
+    Meowth: { otherFormes: ['Meowth-Alola'] },
+    Muk: { otherFormes: ['Muk-Alola'] },
+    Ninetales: { otherFormes: ['Ninetales-Alola'] },
+    Persian: { otherFormes: ['Persian-Alola'] },
+    Pikachu: { otherFormes: ['Pikachu-Starter'] },
+    Raichu: { otherFormes: ['Raichu-Alola'] },
+    Raticate: { otherFormes: ['Raticate-Alola'] },
+    Rattata: { otherFormes: ['Rattata-Alola'] },
+    Sandshrew: { otherFormes: ['Sandshrew-Alola'] },
+    Sandslash: { otherFormes: ['Sandslash-Alola'] },
+    Vulpix: { otherFormes: ['Vulpix-Alola'] },
+    
+    Arbok: { bs: { at: 95 } },
+    Dodrio: { bs: { sp: 110 } },
+    Electrode: { bs: { sp: 150 } },
+    'Farfetch\u2019d': { bs: { at: 90 } },
+    Gengar: { abilities: { 0: 'Cursed Body' } },
+
+    'Diglett-Alola': {
+        types: ['Ground', 'Steel'],
+        bs: { hp: 10, at: 55, df: 30, sa: 35, sd: 45, sp: 90 },
+        weightkg: 1,
+        baseSpecies: 'Diglett',
+        nfe: true,
+        abilities: { 0: 'Sand Veil' }
+    },
+    'Dugtrio-Alola': {
+        types: ['Ground', 'Steel'],
+        bs: { hp: 35, at: 100, df: 60, sa: 50, sd: 70, sp: 110 },
+        weightkg: 66.6,
+        baseSpecies: 'Dugtrio',
+        abilities: { 0: 'Sand Veil' }
+    },
+    'Eevee-Starter': {
+        types: ['Normal'],
+        bs: { hp: 65, at: 75, df: 70, sa: 65, sd: 85, sp: 75 },
+        weightkg: 6.5,
+        abilities: { 0: 'Run Away' },
+        baseSpecies: 'Eevee'
+    },
+    'Exeggutor-Alola': {
+        types: ['Grass', 'Dragon'],
+        bs: { hp: 95, at: 105, df: 85, sa: 125, sd: 75, sp: 45 },
+        weightkg: 415.6,
+        baseSpecies: 'Exeggutor',
+        abilities: { 0: 'Frisk' }
+    },
+    'Geodude-Alola': {
+        types: ['Rock', 'Electric'],
+        bs: { hp: 40, at: 80, df: 100, sa: 30, sd: 30, sp: 20 },
+        weightkg: 20.3,
+        baseSpecies: 'Geodude',
+        nfe: true,
+        abilities: { 0: 'Magnet Pull' }
+    },
+    'Golem-Alola': {
+        types: ['Rock', 'Electric'],
+        bs: { hp: 80, at: 120, df: 130, sa: 55, sd: 65, sp: 45 },
+        weightkg: 316,
+        abilities: { 0: 'Magnet Pull' },
+        baseSpecies: 'Golem'
+    },
+    'Graveler-Alola': {
+        types: ['Rock', 'Electric'],
+        bs: { hp: 55, at: 95, df: 115, sa: 45, sd: 45, sp: 35 },
+        weightkg: 110,
+        baseSpecies: 'Graveler',
+        nfe: true,
+        abilities: { 0: 'Magnet Pull' }
+    },
+    'Grimer-Alola': {
+        types: ['Poison', 'Dark'],
+        bs: { hp: 80, at: 80, df: 50, sa: 40, sd: 50, sp: 25 },
+        weightkg: 42,
+        baseSpecies: 'Grimer',
+        nfe: true,
+        abilities: { 0: 'Poison Touch' }
+    },
+    'Marowak-Alola': {
+        types: ['Fire', 'Ghost'],
+        bs: { hp: 60, at: 80, df: 110, sa: 50, sd: 80, sp: 45 },
+        weightkg: 34,
+        abilities: { 0: 'Cursed Body' },
+        baseSpecies: 'Marowak'
+    },
+    'Meowth-Alola': {
+        types: ['Dark'],
+        bs: { hp: 40, at: 35, df: 35, sa: 50, sd: 40, sp: 90 },
+        weightkg: 4.2,
+        baseSpecies: 'Meowth',
+        nfe: true,
+        abilities: { 0: 'Pickup' }
+    },
+    'Muk-Alola': {
+        types: ['Poison', 'Dark'],
+        bs: { hp: 105, at: 105, df: 75, sa: 65, sd: 100, sp: 50 },
+        weightkg: 52,
+        baseSpecies: 'Muk',
+        abilities: { 0: 'Poison Touch' }
+    },
+    'Ninetales-Alola': {
+        types: ['Ice', 'Fairy'],
+        bs: { hp: 73, at: 67, df: 75, sa: 81, sd: 100, sp: 109 },
+        weightkg: 19.9,
+        abilities: { 0: 'Snow Cloak' },
+        baseSpecies: 'Ninetales'
+    },
+    'Persian-Alola': {
+        types: ['Dark'],
+        bs: { hp: 65, at: 60, df: 60, sa: 75, sd: 65, sp: 115 },
+        weightkg: 33,
+        baseSpecies: 'Persian',
+        abilities: { 0: 'Fur Coat' }
+    },
+    'Pikachu-Starter': {
+        types: ['Electric'],
+        bs: { hp: 45, at: 80, df: 50, sa: 75, sd: 60, sp: 120 },
+        weightkg: 6,
+        abilities: { 0: 'Static' },
+        baseSpecies: 'Pikachu'
+    },
+    'Raichu-Alola': {
+        types: ['Electric', 'Psychic'],
+        bs: { hp: 60, at: 85, df: 50, sa: 95, sd: 85, sp: 110 },
+        weightkg: 21,
+        baseSpecies: 'Raichu',
+        abilities: { 0: 'Surge Surfer' }
+    },
+    'Raticate-Alola': {
+        types: ['Dark', 'Normal'],
+        bs: { hp: 75, at: 71, df: 70, sa: 40, sd: 80, sp: 77 },
+        weightkg: 25.5,
+        baseSpecies: 'Raticate',
+        abilities: { 0: 'Gluttony' }
+    },
+    'Rattata-Alola': {
+        types: ['Dark', 'Normal'],
+        bs: { hp: 30, at: 56, df: 35, sa: 25, sd: 35, sp: 72 },
+        weightkg: 3.8,
+        baseSpecies: 'Rattata',
+        nfe: true,
+        abilities: { 0: 'Gluttony' }
+    },
+    'Sandshrew-Alola': {
+        types: ['Ice', 'Steel'],
+        bs: { hp: 50, at: 75, df: 90, sa: 10, sd: 35, sp: 40 },
+        weightkg: 40,
+        baseSpecies: 'Sandshrew',
+        nfe: true,
+        abilities: { 0: 'Snow Cloak' }
+    },
+    'Sandslash-Alola': {
+        types: ['Ice', 'Steel'],
+        bs: { hp: 75, at: 100, df: 120, sa: 25, sd: 65, sp: 65 },
+        weightkg: 55,
+        baseSpecies: 'Sandslash',
+        abilities: { 0: 'Snow Cloak' }
+    },
+    'Vulpix-Alola': {
+        types: ['Ice'],
+        bs: { hp: 38, at: 41, df: 40, sa: 50, sd: 65, sp: 65 },
+        weightkg: 9.9,
+        baseSpecies: 'Vulpix',
+        nfe: true,
+        abilities: { 0: 'Snow Cloak' }
+    }
+}
+var LGPE = (0, util_1.extend)(true, {}, RBY, LGPE_PATCH);
+exports.SPECIES = [LGPE, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Species = (function () {
     function Species(gen) {
         this.gen = gen;
