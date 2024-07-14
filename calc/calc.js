@@ -8,7 +8,7 @@ var gen4_1 = require("./mechanics/gen4");
 var gen56_1 = require("./mechanics/gen56");
 var gen789_1 = require("./mechanics/gen789");
 var MECHANICS = [
-    function () { },
+    gen789_1.calculateSMSSSV,
     gen12_1.calculateRBYGSC,
     gen12_1.calculateRBYGSC,
     gen3_1.calculateADV,
