@@ -1639,7 +1639,7 @@ if (option.id) results.push(option);
 
 function get_trainer_names() {
     var all_sets = [
-        {}, 
+        typeof SETDEX_LGPE === 'undefined' ? {} : SETDEX_LGPE,
         typeof SETDEX_RBY === 'undefined' ? {} : SETDEX_RBY,
         typeof SETDEX_GSC === 'undefined' ? {} : SETDEX_GSC,
         typeof SETDEX_ADV === 'undefined' ? {} : SETDEX_ADV,
