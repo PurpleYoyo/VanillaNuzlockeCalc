@@ -1246,19 +1246,20 @@ function calcStat(poke, StatID) {
 }
 
 var GENERATION = {
+	'0': 0, 'lgpe': 0,
 	'1': 1, 'rb': 1, 'rby': 1,
 	'2': 2, 'gs': 2, 'gsc': 2,
 	'3': 3, 'rs': 3, 'rse': 3, 'frlg': 3, 'adv': 3,
 	'4': 4, 'dp': 4, 'dpp': 4, 'hgss': 4,
 	'5': 5, 'bw': 5, 'bw2': 5, 'b2w2': 5,
 	'6': 6, 'xy': 6, 'oras': 6,
-	'7': 7, 'sm': 7, 'usm': 7, 'usum': 7,
+	'7': 7, 'sm': 7, 'usm': 7, 'usum': 7',
 	'8': 8, 'ss': 8,
 	'9': 9, 'sv': 9
 };
 
 var SETDEX = [
-	{},
+	typeof SETDEX_LGPE === 'undefined' ? {} : SETDEX_LGPE,
 	typeof SETDEX_RBY === 'undefined' ? {} : SETDEX_RBY,
 	typeof SETDEX_GSC === 'undefined' ? {} : SETDEX_GSC,
 	typeof SETDEX_ADV === 'undefined' ? {} : SETDEX_ADV,
@@ -1270,7 +1271,7 @@ var SETDEX = [
 	typeof SETDEX_SV === 'undefined' ? {} : SETDEX_SV,
 ];
 var RANDDEX = [
-	{},
+	typeof GEN0RANDOMBATTLE === 'undefined' ? {} : GEN0RANDOMBATTLE,
 	typeof GEN1RANDOMBATTLE === 'undefined' ? {} : GEN1RANDOMBATTLE,
 	typeof GEN2RANDOMBATTLE === 'undefined' ? {} : GEN2RANDOMBATTLE,
 	typeof GEN3RANDOMBATTLE === 'undefined' ? {} : GEN3RANDOMBATTLE,
