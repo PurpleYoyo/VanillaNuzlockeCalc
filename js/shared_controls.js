@@ -1038,6 +1038,7 @@ function createPokemon(pokeInfo) {
 		});
 	} else {
 		var setName = pokeInfo.find("input.set-selector").val();
+		console.log(setName);
 		var name;
 		if (setName.indexOf("(") === -1) {
 			name = setName;
