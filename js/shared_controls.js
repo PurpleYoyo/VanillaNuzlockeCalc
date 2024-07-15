@@ -1341,8 +1341,8 @@ $(".gen").change(function () {
 	var itemOptions = getSelectOptions(items, true);
 	$("select.item").find("option").remove().end().append("<option value=\"\">(none)</option>" + itemOptions);
 
-	$(".set-selector").val(getFirstValidSetOption().id);
-	$(".set-selector").change();
+	//$(".set-selector").val(getFirstValidSetOption().id);
+	//$(".set-selector").change();
 });
 
 function getFirstValidSetOption() {
