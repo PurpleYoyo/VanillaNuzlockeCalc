@@ -96,11 +96,11 @@ exports.Stats = new ((function () {
         }
         return ivs;
     };
-    class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, nature) {
+    class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, nature, av, friendship) {
         if (gen.num < 0 || gen.num > 9)
             throw new Error("Invalid generation ".concat(gen.num));
         if (gen.num === 0)
-            return this.calcStatLGPE(gen.natures, stat, base, iv, av, level, nature);
+            return this.calcStatLGPE(gen.natures, stat, base, iv, av, level, nature, friendship);
         if (gen.num < 3)
             return this.calcStatRBY(stat, base, iv, level);
         return this.calcStatADV(gen.natures, stat, base, iv, ev, level, nature);
@@ -127,7 +127,7 @@ exports.Stats = new ((function () {
             return Math.floor((Math.floor(((base * 2 + iv + Math.floor(ev / 4)) * level) / 100) + 5) * n);
         }
     };
-    class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature) {
+    class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
         if (stat === 'hp') {
             return base === 1
                 ? base
@@ -146,7 +146,7 @@ exports.Stats = new ((function () {
                     : mods[1] === stat
                         ? 0.9
                         : 1;
-            return Math.floor((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n) + av;
+            return Math.floor((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av;
         }
     };
 // ADDED - remove max evs in gen 1/2
