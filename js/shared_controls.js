@@ -1232,8 +1232,12 @@ function calcStat(poke, StatID) {
 	var stat = poke.find("." + StatID);
 	var base = ~~stat.find(".base").val();
 	var level = ~~poke.find(".level").val();
-	var nature, ivs, evs;
-	if (gen < 3) {
+	var nature, ivs, evs, avs;
+	if (gen === 0) {
+		ivs = ~~stat.find(".ivs").val();
+		avs = ~~stat.find(".avs").val();
+		evs = 252;
+	} else if (gen < 3) {
 		ivs = ~~stat.find(".dvs").val() * 2;
 		evs = 252;
 	} else {
