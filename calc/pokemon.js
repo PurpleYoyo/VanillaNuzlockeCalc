@@ -52,11 +52,12 @@ var Pokemon = (function () {
         this.nature = options.nature || 'Serious';
         this.ivs = Pokemon.withDefault(gen, options.ivs, 31);
         this.evs = Pokemon.withDefault(gen, options.evs, gen.num >= 3 ? 0 : 252);
+        this.avs = Pokemon.withDefault(gen, options.avs, gen.num === 0 ? 0 : 200);
         this.boosts = Pokemon.withDefault(gen, options.boosts, 0, false);
         if (this.weightkg === 0 && !this.isDynamaxed && this.species.baseSpecies) {
             this.weightkg = gen.species.get((0, util_1.toID)(this.species.baseSpecies)).weightkg;
         }
-        if (gen.num < 3) {
+        if (gen.num < 3 && gen.num > 0) {
             this.ivs.hp = stats_1.Stats.DVToIV(stats_1.Stats.getHPDV({
                 atk: this.ivs.atk,
                 def: this.ivs.def,
@@ -188,6 +189,7 @@ var Pokemon = (function () {
             nature: this.nature,
             ivs: (0, util_1.extend)(true, {}, this.ivs),
             evs: (0, util_1.extend)(true, {}, this.evs),
+            avs: (0, util_1.extend)(true, {}, this.avs),
             boosts: (0, util_1.extend)(true, {}, this.boosts),
             originalCurHP: this.originalCurHP,
             status: this.status,
