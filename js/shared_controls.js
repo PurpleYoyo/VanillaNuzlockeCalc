@@ -1233,11 +1233,12 @@ function calcHP(poke) {
 
 function calcStat(poke, StatID) {
 	var stat = poke.find("." + StatID);
-	console.log(poke);
 	console.log(stat);
 	var base = ~~stat.find(".base").val();
 	var level = ~~poke.find(".level").val();
 	var nature, ivs, evs, avs;
+	console.log(base);
+	console.log(level);
 	var friendship = 100; //temporary
 	if (gen === 0) {
 		ivs = ~~stat.find(".ivs").val();
