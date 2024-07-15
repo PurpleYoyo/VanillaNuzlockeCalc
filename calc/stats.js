@@ -11,7 +11,8 @@ var XY = GSC;
 var SM = GSC;
 var SS = GSC;
 var SV = GSC;
-exports.STATS = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+var LGPE = GSC;
+exports.STATS = [LGPE, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var HP_TYPES = [
     'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel',
     'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark',
@@ -96,8 +97,10 @@ exports.Stats = new ((function () {
         return ivs;
     };
     class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, nature) {
-        if (gen.num < 1 || gen.num > 9)
+        if (gen.num < 0 || gen.num > 9)
             throw new Error("Invalid generation ".concat(gen.num));
+        if (gen.num === 0)
+            return this.calcStatLGPE(gen.natures, stat, base, iv, av, level, nature);
         if (gen.num < 3)
             return this.calcStatRBY(stat, base, iv, level);
         return this.calcStatADV(gen.natures, stat, base, iv, ev, level, nature);
@@ -122,6 +125,28 @@ exports.Stats = new ((function () {
                         ? 0.9
                         : 1;
             return Math.floor((Math.floor(((base * 2 + iv + Math.floor(ev / 4)) * level) / 100) + 5) * n);
+        }
+    };
+    class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature) {
+        if (stat === 'hp') {
+            return base === 1
+                ? base
+                : Math.floor(((base * 2 + iv) * level) / 100) + level + 10 + av;
+        }
+        else {
+            var mods = [undefined, undefined];
+            if (nature) {
+                var nat = natures.get((0, util_1.toID)(nature));
+                mods = [nat === null || nat === void 0 ? void 0 : nat.plus, nat === null || nat === void 0 ? void 0 : nat.minus];
+            }
+            var n = mods[0] === stat && mods[1] === stat
+                ? 1
+                : mods[0] === stat
+                    ? 1.1
+                    : mods[1] === stat
+                        ? 0.9
+                        : 1;
+            return Math.floor((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n) + av;
         }
     };
 // ADDED - remove max evs in gen 1/2
