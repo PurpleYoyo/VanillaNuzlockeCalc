@@ -123,22 +123,22 @@ $(".level").bind("keyup change", function () {
 $(".nature").bind("keyup change", function () {
 	calcStats($(this).closest(".poke-info"));
 });
-$(".hp .base, .hp .evs, .hp .ivs").bind("keyup change", function () {
+$(".hp .base, .hp .evs, .hp .ivs .hp .avs").bind("keyup change", function () {
 	calcHP($(this).closest(".poke-info"));
 });
-$(".at .base, .at .evs, .at .ivs").bind("keyup change", function () {
+$(".at .base, .at .evs, .at .ivs .at .avs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'at');
 });
-$(".df .base, .df .evs, .df .ivs").bind("keyup change", function () {
+$(".df .base, .df .evs, .df .ivs .df .avs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'df');
 });
-$(".sa .base, .sa .evs, .sa .ivs").bind("keyup change", function () {
+$(".sa .base, .sa .evs, .sa .ivs .sa .avs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'sa');
 });
-$(".sd .base, .sd .evs, .sd .ivs").bind("keyup change", function () {
+$(".sd .base, .sd .evs, .sd .ivs .sd .avs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'sd');
 });
-$(".sp .base, .sp .evs, .sp .ivs").bind("keyup change", function () {
+$(".sp .base, .sp .evs, .sp .ivs .sp .avs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'sp');
 });
 $(".sl .base").keyup(function () {
@@ -1038,7 +1038,6 @@ function createPokemon(pokeInfo) {
 		});
 	} else {
 		var setName = pokeInfo.find("input.set-selector").val();
-		console.log(setName.substring(0, setName.indexOf(" (")));
 		var name;
 		if (setName.indexOf("(") === -1) {
 			name = setName;
@@ -1234,6 +1233,8 @@ function calcHP(poke) {
 
 function calcStat(poke, StatID) {
 	var stat = poke.find("." + StatID);
+	console.log(poke);
+	console.log(stat);
 	var base = ~~stat.find(".base").val();
 	var level = ~~poke.find(".level").val();
 	var nature, ivs, evs, avs;
