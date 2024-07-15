@@ -20,6 +20,7 @@ export declare class Pokemon implements State.Pokemon {
     nature: I.NatureName;
     ivs: I.StatsTable;
     evs: I.StatsTable;
+    avs: I.StatsTable;
     boosts: I.StatsTable;
     rawStats: I.StatsTable;
     stats: I.StatsTable;
