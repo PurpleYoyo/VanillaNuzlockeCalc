@@ -128,6 +128,7 @@ exports.Stats = new ((function () {
         }
     };
     class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
+        console.log(natures, stat, base, iv, av, level, nature, friendship);
         if (stat === 'hp') {
             return base === 1
                 ? base
@@ -146,6 +147,7 @@ exports.Stats = new ((function () {
                     : mods[1] === stat
                         ? 0.9
                         : 1;
+            console.log(Math.floor((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av);
             return Math.floor((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av;
         }
     };
