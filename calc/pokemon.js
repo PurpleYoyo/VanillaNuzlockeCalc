@@ -230,7 +230,7 @@ var Pokemon = (function () {
                 cur.spa = current.spc;
                 cur.spd = current.spc;
             }
-            if (match && gen.num <= 2 && current.spa !== current.spd) {
+            if (match && gen.num <= 2 && gen > 0 && current.spa !== current.spd) {
                 throw new Error('Special Attack and Special Defense must match before Gen 3');
             }
         }
