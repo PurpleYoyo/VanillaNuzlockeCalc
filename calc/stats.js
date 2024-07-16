@@ -97,6 +97,7 @@ exports.Stats = new ((function () {
         return ivs;
     };
     class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, nature, av, friendship) {
+        console.log(gen, stat, base, iv, ev, level, nature, av, friendship);
         if (gen.num < 0 || gen.num > 9)
             throw new Error("Invalid generation ".concat(gen.num));
         if (gen.num === 0)
@@ -128,7 +129,6 @@ exports.Stats = new ((function () {
         }
     };
     class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
-        console.log(natures, stat, base, iv, av, level, nature, friendship);
         if (stat === 'hp') {
             return base === 1
                 ? base
