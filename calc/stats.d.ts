@@ -13,7 +13,7 @@ export declare const Stats: {
     IVToDV(iv: number): number;
     DVToIV(dv: number): number;
     DVsToIVs(dvs: Readonly<Partial<StatsTable>>): Partial<StatsTable<number>>;
-    calcStat(gen: Generation, stat: StatID, base: number, iv: number, ev: number, level: number, nature?: string): number;
+    calcStat(gen: Generation, stat: StatID, base: number, iv: number, ev: number, level: number, nature?: string, av: number, friendship: number): number;
     calcStatADV(natures: Natures, stat: StatID, base: number, iv: number, ev: number, level: number, nature?: string): number;
     calcStatRBY(stat: StatID, base: number, iv: number, level: number): number;
     calcStatLGPE(natures: Natures, stat: StatID, base: number, iv: number, av: number, level: number, nature?: string, friendship: number): number;
