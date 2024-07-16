@@ -76,6 +76,7 @@ var bounds = {
 	"evs": [0, 252],
 	"ivs": [0, 31],
 	"dvs": [0, 15],
+	"avs": [0, 200],
 	"move-bp": [0, 65535],
 	"g1g2-evs": [0,65535]
 };
@@ -1255,7 +1256,6 @@ function calcStat(poke, StatID) {
 			nature = poke.find(".nature").val();
 	}
 	// Shedinja still has 1 max HP during the effect even if its Dynamax Level is maxed (DaWoblefet)
-	console.log(gen, legacyStatToStat(StatID), base, ivs, evs, level, nature, avs, friendship);
 	var total = calc.calcStat(gen, legacyStatToStat(StatID), base, ivs, evs, level, nature, avs, friendship);
 	if (gen > 7 && StatID === "hp" && poke.isDynamaxed && total !== 1) {
 		total *= 2;
