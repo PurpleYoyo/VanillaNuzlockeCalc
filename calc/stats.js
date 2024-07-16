@@ -128,6 +128,7 @@ exports.Stats = new ((function () {
         }
     };
     class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
+        console.log(natures, stat, base, iv, av, level, nature, friendship);
         if (stat === 'hp') {
             return base === 1
                 ? base
