@@ -997,12 +997,14 @@ function createPokemon(pokeInfo) {
 
 		var ivs = {};
 		var evs = {};
+		var avs = {};
 		for (var i = 0; i < LEGACY_STATS[gen].length; i++) {
 			var legacyStat = LEGACY_STATS[gen][i];
 			var stat = legacyStatToStat(legacyStat);
 
 			ivs[stat] = (gen >= 3 && set.ivs && typeof set.ivs[legacyStat] !== "undefined") ? set.ivs[legacyStat] : 31;
 			evs[stat] = (set.evs && typeof set.evs[legacyStat] !== "undefined") ? set.evs[legacyStat] : 0;
+			avs[stat] = (set.avs && typeof set.avs[legacyStat] !== "undefined") ? set.avs[legacyStat] : 0;
 		}
 		var moveNames = set.moves;
 		if (isRandoms && (gen !== 8 && gen !== 1)) {
@@ -1035,6 +1037,7 @@ function createPokemon(pokeInfo) {
 			nature: set.nature,
 			ivs: ivs,
 			evs: evs,
+			avs: avs,
 			moves: pokemonMoves
 		});
 	} else {
@@ -1067,6 +1070,7 @@ function createPokemon(pokeInfo) {
 		var item = pokeInfo.find(".item").val();
 		var isDynamaxed = pokeInfo.find(".max").prop("checked");
 		var teraType = pokeInfo.find(".teraToggle").is(":checked") ? pokeInfo.find(".teraType").val() : undefined;
+		var friendship = 100; //temporary
 		var opts = {
 			ability: ability,
 			item: item,
@@ -1089,6 +1093,7 @@ function createPokemon(pokeInfo) {
 			ivs: ivs,
 			evs: evs,
 			avs: avs,
+			friendship: friendship,
 			isDynamaxed: isDynamaxed,
 			isSaltCure: pokeInfo.find(".saltcure").is(":checked"),
 			alliesFainted: parseInt(pokeInfo.find(".alliesFainted").val()),
