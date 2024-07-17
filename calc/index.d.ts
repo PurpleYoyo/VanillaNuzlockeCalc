@@ -28,7 +28,7 @@ export declare class Pokemon extends A.Pokemon {
     });
     static getForme(gen: I.GenerationNum | I.Generation, speciesName: string, item?: string, moveName?: string): string;
 }
-export declare function calcStat(gen: I.GenerationNum | I.Generation, stat: I.StatID | 'spc', base: number, iv: number, ev: number, level: number, nature?: string): number;
+export declare function calcStat(gen: I.GenerationNum | I.Generation, stat: I.StatID | 'spc', base: number, iv: number, ev: number, level: number, nature?: string, av: number, friendship: number): number;
 export { Field, Side } from './field';
 export { Result } from './result';
 export { GenerationNum, StatsTable, StatID } from './data/interface';
