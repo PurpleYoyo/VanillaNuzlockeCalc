@@ -146,7 +146,7 @@ exports.Stats = new ((function () {
                     : mods[1] === stat
                         ? 0.9
                         : 1;
-            console.log(return Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av));
+            console.log(Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av));
             return Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av);
         }
     };
