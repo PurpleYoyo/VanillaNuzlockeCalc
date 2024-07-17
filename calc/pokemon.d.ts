@@ -22,6 +22,7 @@ export declare class Pokemon implements State.Pokemon {
     evs: I.StatsTable;
     avs: I.StatsTable;
     boosts: I.StatsTable;
+    friendship: number;
     rawStats: I.StatsTable;
     stats: I.StatsTable;
     originalCurHP: number;
