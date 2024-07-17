@@ -54,7 +54,7 @@ var Pokemon = (function () {
         this.evs = Pokemon.withDefault(gen, options.evs, gen.num >= 3 ? 0 : 252);
         this.avs = Pokemon.withDefault(gen, options.avs, gen.num === 0 ? 0 : 200);
         this.boosts = Pokemon.withDefault(gen, options.boosts, 0, false);
-        this.friendship = 255;
+        this.friendship = options.friendship;
         if (this.weightkg === 0 && !this.isDynamaxed && this.species.baseSpecies) {
             this.weightkg = gen.species.get((0, util_1.toID)(this.species.baseSpecies)).weightkg;
         }
