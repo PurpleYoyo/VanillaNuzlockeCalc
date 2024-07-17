@@ -145,13 +145,6 @@ exports.Stats = new ((function () {
                         ? 0.9
                         : 1;
             var f = 1 + (friendship / 255 * 0.1)
-            console.log(stat);
-            console.log(n);
-            console.log(f);
-            console.log(Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av));
-            console.log(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av);
-            console.log(((((base * 2 + iv) * level) / 100) + 5) * n * f) + av;
-            console.log(((((base * 2 + iv) * level) / 100) + 5) * n * f);
             return Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av);
         }
     };
