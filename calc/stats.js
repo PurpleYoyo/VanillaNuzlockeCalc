@@ -147,8 +147,9 @@ exports.Stats = new ((function () {
                         ? 0.9
                         : 1;
             console.log(stat);
-            console.log(Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av));
-            return Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av);
+            console.log(Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av));
+            var f = 1 + (friendship / 255 * 0.1)
+            return Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av);
         }
     };
 // ADDED - remove max evs in gen 1/2
