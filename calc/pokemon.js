@@ -54,6 +54,7 @@ var Pokemon = (function () {
         this.evs = Pokemon.withDefault(gen, options.evs, gen.num >= 3 ? 0 : 252);
         this.avs = Pokemon.withDefault(gen, options.avs, gen.num === 0 ? 0 : 200);
         this.boosts = Pokemon.withDefault(gen, options.boosts, 0, false);
+        this.friendship = 255;
         if (this.weightkg === 0 && !this.isDynamaxed && this.species.baseSpecies) {
             this.weightkg = gen.species.get((0, util_1.toID)(this.species.baseSpecies)).weightkg;
         }
@@ -191,6 +192,7 @@ var Pokemon = (function () {
             evs: (0, util_1.extend)(true, {}, this.evs),
             avs: (0, util_1.extend)(true, {}, this.avs),
             boosts: (0, util_1.extend)(true, {}, this.boosts),
+            friendship: this.friendship,
             originalCurHP: this.originalCurHP,
             status: this.status,
             teraType: this.teraType,
@@ -200,7 +202,7 @@ var Pokemon = (function () {
         });
     };
     Pokemon.prototype.calcStat = function (gen, stat) {
-        return stats_1.Stats.calcStat(gen, stat, this.species.baseStats[stat], this.ivs[stat], this.evs[stat], this.level, this.nature);
+        return stats_1.Stats.calcStat(gen, stat, this.species.baseStats[stat], this.ivs[stat], this.evs[stat], this.level, this.nature, this.avs[stat], this.friendship);
     };
     Pokemon.getForme = function (gen, speciesName, item, moveName) {
         var species = gen.species.get((0, util_1.toID)(speciesName));
