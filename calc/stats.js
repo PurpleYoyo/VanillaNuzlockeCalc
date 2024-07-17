@@ -97,7 +97,6 @@ exports.Stats = new ((function () {
         return ivs;
     };
     class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, nature, av, friendship) {
-        console.log(gen, stat, base, iv, ev, level, nature, av, friendship);
         if (gen.num < 0 || gen.num > 9)
             throw new Error("Invalid generation ".concat(gen.num));
         if (gen.num === 0)
@@ -147,7 +146,8 @@ exports.Stats = new ((function () {
                     : mods[1] === stat
                         ? 0.9
                         : 1;
-            return Math.floor((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av;
+            console.log(return Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av));
+            return Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * friendship) + av);
         }
     };
 // ADDED - remove max evs in gen 1/2
