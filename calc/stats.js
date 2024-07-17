@@ -129,9 +129,7 @@ exports.Stats = new ((function () {
     };
     class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
         if (stat === 'hp') {
-            return base === 1
-                ? base
-                : Math.floor(((base * 2 + iv) * level) / 100) + level + 10 + av;
+            return Math.floor(((base * 2 + iv) * level) / 100) + level + 10 + av;
         }
         else {
             var mods = [undefined, undefined];
@@ -146,9 +144,14 @@ exports.Stats = new ((function () {
                     : mods[1] === stat
                         ? 0.9
                         : 1;
-            console.log(stat);
-            console.log(Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av));
             var f = 1 + (friendship / 255 * 0.1)
+            console.log(stat);
+            console.log(n);
+            console.log(f);
+            console.log(Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av));
+            console.log(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av);
+            console.log(((((base * 2 + iv) * level) / 100) + 5) * n * f) + av;
+            console.log(((((base * 2 + iv) * level) / 100) + 5) * n * f);
             return Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av);
         }
     };
