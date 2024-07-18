@@ -15,6 +15,8 @@ export declare namespace State {
         nature?: I.NatureName;
         ivs?: Partial<I.StatsTable>;
         evs?: Partial<I.StatsTable>;
+        avs?: Partial<I.StatsTable>;
+        friendship?: number;
         boosts?: Partial<I.StatsTable>;
         originalCurHP?: number;
         status?: I.StatusName | '';
