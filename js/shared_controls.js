@@ -998,6 +998,7 @@ function createPokemon(pokeInfo) {
 		var ivs = {};
 		var evs = {};
 		var avs = {};
+		var friendship = 0;
 		for (var i = 0; i < LEGACY_STATS[gen].length; i++) {
 			var legacyStat = LEGACY_STATS[gen][i];
 			var stat = legacyStatToStat(legacyStat);
@@ -1038,6 +1039,7 @@ function createPokemon(pokeInfo) {
 			ivs: ivs,
 			evs: evs,
 			avs: avs,
+			friendship: friendship,
 			moves: pokemonMoves
 		});
 	} else {
@@ -1358,6 +1360,7 @@ $(".gen").change(function () {
 	var itemOptions = getSelectOptions(items, true);
 	$("select.item").find("option").remove().end().append("<option value=\"\">(none)</option>" + itemOptions);
 
+	//temporary
 	//$(".set-selector").val(getFirstValidSetOption().id);
 	//$(".set-selector").change();
 });
