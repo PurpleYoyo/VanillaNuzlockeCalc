@@ -37,6 +37,8 @@ export declare class Pokemon implements State.Pokemon {
         evs?: Partial<I.StatsTable> & {
             spc?: number;
         };
+        avs?: Partial<I.StatsTable>;
+        friendship?: number;
         boosts?: Partial<I.StatsTable> & {
             spc?: number;
         };
