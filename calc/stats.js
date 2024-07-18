@@ -128,6 +128,7 @@ exports.Stats = new ((function () {
         }
     };
     class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
+        console.log(natures);
         if (stat === 'hp') {
             return Math.floor(((base * 2 + iv) * level) / 100) + level + 10 + av;
         }
