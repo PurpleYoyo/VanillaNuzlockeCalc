@@ -370,7 +370,8 @@ var SV = SS.concat([
     'Wind Rider',
     'Zero to Hero',
 ]);
-exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+var LGPE = [];
+exports.ABILITIES = [LGPE, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {
     function Abilities(gen) {
         this.gen = gen;
