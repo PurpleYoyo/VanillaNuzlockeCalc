@@ -106,7 +106,6 @@ exports.Stats = new ((function () {
         return this.calcStatADV(gen.natures, stat, base, iv, ev, level, nature);
     };
     class_1.prototype.calcStatADV = function (natures, stat, base, iv, ev, level, nature) {
-        console.log(natures[0]);
         if (stat === 'hp') {
             return base === 1
                 ? base
@@ -129,7 +128,6 @@ exports.Stats = new ((function () {
         }
     };
     class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
-        console.log(natures[0]);
         if (stat === 'hp') {
             return Math.floor(((base * 2 + iv) * level) / 100) + level + 10 + av;
         }
