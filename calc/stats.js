@@ -106,6 +106,7 @@ exports.Stats = new ((function () {
         return this.calcStatADV(gen.natures, stat, base, iv, ev, level, nature);
     };
     class_1.prototype.calcStatADV = function (natures, stat, base, iv, ev, level, nature) {
+        console.log(natures);
         if (stat === 'hp') {
             return base === 1
                 ? base
