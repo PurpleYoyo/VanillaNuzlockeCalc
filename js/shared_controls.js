@@ -592,6 +592,7 @@ $(".set-selector").change(function () {
 	var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
 	var setName = fullSetName.substring(fullSetName.indexOf("(") + 1, fullSetName.lastIndexOf(")"));
 	var pokemon = pokedex[pokemonName];
+	console.log(pokemon);
 	if (pokemon) {
 		var pokeObj = $(this).closest(".poke-info");
 		var isAutoTera =
