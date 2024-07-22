@@ -147,7 +147,7 @@ exports.Stats = new ((function () {
                     : mods[1] === stat
                         ? 0.9
                         : 1;
-            var f = 1 + (friendship / 255 * 0.1)
+            var f = 1 + Math.floor(friendship / 255 * 0.1)
             var total = Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av);
             //console.log("5", stat, total);
             return total;
