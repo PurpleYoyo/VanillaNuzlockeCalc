@@ -100,7 +100,7 @@ exports.Stats = new ((function () {
         if (gen.num < 0 || gen.num > 9)
             throw new Error("Invalid generation ".concat(gen.num));
         if (gen.num === 0)
-            return this.calcStatLGPE(gen.natures, stat, base, iv, av, level, nature, friendship);
+            return this.calcStatLGPE(gen.natures, stat, base, iv, av, level, friendship, nature);
         if (gen.num < 3)
             return this.calcStatRBY(stat, base, iv, level);
         return this.calcStatADV(gen.natures, stat, base, iv, ev, level, nature);
@@ -127,7 +127,7 @@ exports.Stats = new ((function () {
             return Math.floor((Math.floor(((base * 2 + iv + Math.floor(ev / 4)) * level) / 100) + 5) * n);
         }
     };
-    class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
+    class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, friendship, nature) {
         console.log("5", natures, stat, base, iv, av, level, nature, friendship);
         if (stat === 'hp') {
             var total = Math.floor(((base * 2 + iv) * level) / 100) + level + 10 + av;
