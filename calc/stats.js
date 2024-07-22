@@ -96,7 +96,7 @@ exports.Stats = new ((function () {
         }
         return ivs;
     };
-    class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, nature, av, friendship) {
+    class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, av, friendship, nature) {
         if (gen.num < 0 || gen.num > 9)
             throw new Error("Invalid generation ".concat(gen.num));
         if (gen.num === 0)
