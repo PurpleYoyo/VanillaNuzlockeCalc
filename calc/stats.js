@@ -128,9 +128,10 @@ exports.Stats = new ((function () {
         }
     };
     class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, nature, friendship) {
+        console.log("5", natures, stat, base, iv, av, level, nature, friendship);
         if (stat === 'hp') {
             var total = Math.floor(((base * 2 + iv) * level) / 100) + level + 10 + av;
-            console.log("5", stat, total);
+            //console.log("5", stat, total);
             return total;
         }
         else {
@@ -148,7 +149,7 @@ exports.Stats = new ((function () {
                         : 1;
             var f = 1 + (friendship / 255 * 0.1)
             var total = Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av);
-            console.log("5", stat, total);
+            //console.log("5", stat, total);
             return total;
         }
     };
