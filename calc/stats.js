@@ -97,6 +97,7 @@ exports.Stats = new ((function () {
         return ivs;
     };
     class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, av, friendship, nature) {
+        console.log("7", gen, stat, base, iv, ev, level, av, friendship, nature);
         if (gen.num < 0 || gen.num > 9)
             throw new Error("Invalid generation ".concat(gen.num));
         if (gen.num === 0)
@@ -128,10 +129,8 @@ exports.Stats = new ((function () {
         }
     };
     class_1.prototype.calcStatLGPE = function (natures, stat, base, iv, av, level, friendship, nature) {
-        console.log("5", natures, stat, base, iv, av, level, nature, friendship);
         if (stat === 'hp') {
             var total = Math.floor(((base * 2 + iv) * level) / 100) + level + 10 + av;
-            //console.log("5", stat, total);
             return total;
         }
         else {
@@ -149,7 +148,6 @@ exports.Stats = new ((function () {
                         : 1;
             var f = 1 + Math.floor(friendship / 255 * 0.1)
             var total = Math.floor(((Math.floor(((base * 2 + iv) * level) / 100) + 5) * n * f) + av);
-            //console.log("5", stat, total);
             return total;
         }
     };
