@@ -575,8 +575,18 @@ $(".set-selector").change(function () {
 			continue
 		}
 		var pok_name = next_poks[i].split(" (")[0]
-		if (pok_name == "Zygarde-10%") {
-			pok_name = "Zygarde-10%25"
+		switch (pok_name) {
+			case "Zygarde-10%":
+				pok_name = "Zygarde-10%25";
+				break;
+			case "Flabébé":
+				pok_name = "Flabébé";
+				break;
+			case "Pumpkaboo-Large":
+			case "Pumpkaboo-Super":
+			case "Pumpkaboo-Small":
+				pok_name = "Pumpkaboo";
+				break;
 		}
 	
 
