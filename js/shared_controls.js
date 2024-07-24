@@ -580,7 +580,7 @@ $(".set-selector").change(function () {
 				pok_name = "Zygarde-10%25";
 				break;
 			case "Flabébé":
-				pok_name = "Flabébé";
+				pok_name = "Flabébé";
 				break;
 			case "Pumpkaboo-Large":
 			case "Pumpkaboo-Super":
