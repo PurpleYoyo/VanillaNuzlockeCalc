@@ -71,7 +71,8 @@ var CUSTOMSETDEX = [
 	typeof CUSTOMSETDEX_USUM === 'undefined' ? {} : CUSTOMSETDEX_USUM,
 	typeof CUSTOMSETDEX_SS === 'undefined' ? {} : CUSTOMSETDEX_SS,
 	typeof CUSTOMSETDEX_BDSP === 'undefined' ? {} : CUSTOMSETDEX_BDSP,
-	typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV
+	typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV,
+	typeof CUSTOMSETDEX_LGPE === 'undefined' ? {} : CUSTOMSETDEX_LGPE
 ];
 
 var GAMEGEN = {
