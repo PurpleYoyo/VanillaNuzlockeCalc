@@ -1,0 +1,2 @@
+/* AUTOMATICALLY GENERATED FROM @smogon/sets, DO NOT EDIT! */
+var SETDEX_SS = {"Abomasnow":{"Gen 8":{"index":"810000000606","level":42,"ability":"Snow Warning","item":"Sitrus Berry","nature":"Quiet","ivs":{"hp":13,"at":25,"df":10,"sa":27,"sd":10,"sp":0},"evs":{"hp":124,"at":60,"df":0,"sa":164,"sd":0,"sp":0},"moves":["Aurora Veil","Giga Drain","Earthquake","Blizzard",]}}};

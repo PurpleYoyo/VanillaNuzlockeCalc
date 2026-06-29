@@ -1,0 +1,2 @@
+/* AUTOMATICALLY GENERATED FROM @smogon/sets, DO NOT EDIT! */
+var SETDEX_SM = {"Absol":{"Test":{"level":46,"ability":"Super Luck","item":"None","nature":"Serious","ivs":{"hp":15,"at":31,"df":15,"sa":15,"sd":15,"sp":15},"evs":{"hp":0,"at":0,"df":0,"sa":0,"sd":0,"sp":0},"moves":["Detect","Sucker Punch","Me First","Psycho Cut",]}}};

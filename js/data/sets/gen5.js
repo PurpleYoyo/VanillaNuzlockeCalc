@@ -1,0 +1,2 @@
+/* AUTOMATICALLY GENERATED FROM @smogon/sets, DO NOT EDIT! */
+var SETDEX_BW = {"Absol":{"Test":{"level":48,"ability":"Super Luck","item":"None","nature":"Naughty","ivs":{"hp":12,"at":12,"df":12,"sa":12,"sd":12,"sp":12},"moves":["Night Slash","Slash","Future Sight","Swords Dance",]}}};

@@ -1,0 +1,2 @@
+/* AUTOMATICALLY GENERATED FROM @smogon/sets, DO NOT EDIT! */
+var SETDEX_SV = {"Abomasnow":{"Test":{"index":"900000000131","level":60,"ability":"Snow Warning","item":"None","nature":"Hardy","teraType":"None","ivs":{"hp":20,"at":20,"df":20,"sa":20,"sd":20,"sp":20},"evs":{"hp":0,"at":0,"df":0,"sa":0,"sd":0,"sp":0},"moves":["Aurora Veil","Blizzard","Wood Hammer","Ice Shard",]}}};

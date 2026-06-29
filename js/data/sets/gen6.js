@@ -1,0 +1,2 @@
+/* AUTOMATICALLY GENERATED FROM @smogon/sets, DO NOT EDIT! */
+var SETDEX_XY = {"Abomasnow":{"Test":{"level":56,"ability":"Snow Warning","item":"None","nature":"Relaxed","ivs":{"hp":22,"at":22,"df":22,"sa":22,"sd":22,"sp":22},"moves":["Ice Beam","Ice Shard","Energy Ball","No Move",]}}};
