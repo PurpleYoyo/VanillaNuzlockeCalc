@@ -7,8 +7,9 @@ var gen3_1 = require("./mechanics/gen3");
 var gen4_1 = require("./mechanics/gen4");
 var gen56_1 = require("./mechanics/gen56");
 var gen789_1 = require("./mechanics/gen789");
+var lgpe_1 = require("./mechanics/lgpe");
 var MECHANICS = [
-    function () { },
+    lgpe_1,
     gen12_1.calculateRBYGSC,
     gen12_1.calculateRBYGSC,
     gen3_1.calculateADV,
