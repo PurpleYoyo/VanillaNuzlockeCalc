@@ -1732,7 +1732,8 @@ function get_trainer_names() {
 		typeof CUSTOMSETDEX_USUM === 'undefined' ? {} : CUSTOMSETDEX_USUM,
 		typeof CUSTOMSETDEX_SS === 'undefined' ? {} : CUSTOMSETDEX_SS,
 		typeof CUSTOMSETDEX_BDSP === 'undefined' ? {} : CUSTOMSETDEX_BDSP,
-		typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV
+		typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV,
+		typeof CUSTOMSETDEX_LGPE === 'undefined' ? {} : CUSTOMSETDEX_LGPE
 	];
     
     var trainer_names = [];
@@ -1991,7 +1992,8 @@ var all_sets = [
 	typeof CUSTOMSETDEX_USUM === 'undefined' ? {} : CUSTOMSETDEX_USUM,
 	typeof CUSTOMSETDEX_SS === 'undefined' ? {} : CUSTOMSETDEX_SS,
 	typeof CUSTOMSETDEX_BDSP === 'undefined' ? {} : CUSTOMSETDEX_BDSP,
-	typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV
+	typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV,
+	typeof CUSTOMSETDEX_LGPE === 'undefined' ? {} : CUSTOMSETDEX_LGPE
 ];
 
 function previousTrainer() {
@@ -2304,7 +2306,8 @@ function get_sets(setName = undefined) {
 		typeof CUSTOMSETDEX_USUM === 'undefined' ? {} : CUSTOMSETDEX_USUM,
 		typeof CUSTOMSETDEX_SS === 'undefined' ? {} : CUSTOMSETDEX_SS,
 		typeof CUSTOMSETDEX_BDSP === 'undefined' ? {} : CUSTOMSETDEX_BDSP,
-		typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV
+		typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV,
+		typeof CUSTOMSETDEX_LGPE === 'undefined' ? {} : CUSTOMSETDEX_LGPE
 	];
 
     var sets = [];

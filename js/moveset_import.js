@@ -325,6 +325,8 @@ function updateDex(customsets) {
 			CUSTOMSETDEX_BDSP[pokemon][moveset] = customsets[pokemon][moveset];
 			if (!CUSTOMSETDEX_SV[pokemon]) CUSTOMSETDEX_SV[pokemon] = {};
 			CUSTOMSETDEX_SV[pokemon][moveset] = customsets[pokemon][moveset]
+			if (!CUSTOMSETDEX_LGPE[pokemon]) CUSTOMSETDEX_LGPE[pokemon] = {};
+			CUSTOMSETDEX_LGPE[pokemon][moveset] = customsets[pokemon][moveset]
 		}
 	}
 	localStorage.customsets = JSON.stringify(customsets);
@@ -361,7 +363,8 @@ function get_held_items() {
 		typeof CUSTOMSETDEX_USUM === 'undefined' ? {} : CUSTOMSETDEX_USUM,
 		typeof CUSTOMSETDEX_SS === 'undefined' ? {} : CUSTOMSETDEX_SS,
 		typeof CUSTOMSETDEX_BDSP === 'undefined' ? {} : CUSTOMSETDEX_BDSP,
-		typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV
+		typeof CUSTOMSETDEX_SV === 'undefined' ? {} : CUSTOMSETDEX_SV,
+		typeof CUSTOMSETDEX_LGPE === 'undefined' ? {} : CUSTOMSETDEX_LGPE
 	];
     
     var held_items = [];
